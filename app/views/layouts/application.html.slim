@@ -1,0 +1,67 @@
+doctype html
+html
+head
+    title Tradaq
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+body
+    header.container
+        .row.row-1
+            .col-1= image_tag "tradaq-logo.png"
+            .col-1.slogan
+                | Conectando
+                br
+                | oportunidades.
+
+            .col-1= image_tag "menu.png"
+            .col-1= image_tag "area-restrita.png"
+
+        .row.row-2
+            .col-3.busca-wrapper
+                h2 Busca
+                input.busca
+
+            .col-1.seja-associado
+                = image_tag "seja-associado.jpg"
+
+    main.container.shadow
+        .row
+            .col-1
+                nav
+                    ul
+                        li= link_to "Automotivo"
+                        li= link_to "Cursos e Treinamentos"
+                        li= link_to "Decoração"
+                        li= link_to "Entretenimento"
+                        li= link_to "Eventos"
+                        li= link_to "Imóveis"
+                        li= link_to "Info, Telefonia e TI"
+                        li
+                            h3 Gastronomia
+                            ul
+                                li.active= link_to "Restaurantes"
+                                li= link_to "Bebidas"
+                                li= link_to "Produtos"
+                                li= link_to "Buffet"
+
+                        li= link_to "Hotéis"
+                        li= link_to "Marketing"
+                        li= link_to "Midia"
+                        li= link_to "Mobiliário Corporativo"
+                        li= link_to "Moda"
+                        li= link_to "Saúde e Beleza"
+                        li= link_to "Serviços Corporativos"
+
+                = link_to "Nova Categoria", class: "btn"
+                = link_to "Novo Anúncio", class: "btn"
+
+            .col-3.vert-shadow
+                .breadcrumbs Você buscou por > Restaurantes > Bar e Restaurante Ilha das Flores
+
+                = image_tag "no-photo.png"
+                h3 Nome ou Título
+                p Descrição principal. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                .detalhes

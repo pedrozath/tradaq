@@ -1,0 +1,119 @@
+// @import "grid"
+*
+    box-sizing: border-box
+
+.container
+    width: 1024px
+    margin: 0 auto
+
+.row
+    display: table
+    width: 100%
+
+    > *
+        float: left
+
+@for $i from 1 through 4
+    .col-#{$i}
+        width: 256px * $i
+
+    .row-#{$i} > *
+        height: 120px * $i
+
+body, input
+    font-family: "Proxima Nova"
+    font-weight: 100
+
+
+nav
+    padding-left: 50px
+
+    h3
+        background-image: url(seta-menu.jpg)
+        background-repeat: no-repeat
+        padding-left: 40px
+        margin: 0
+        margin-left: -40px
+        line-height: 30px
+
+    ul
+        display: block
+        list-style-type: none
+        padding: 0
+
+    > ul
+
+        li, li a
+            display: block
+
+        > li
+            a
+                width: 100%
+                color: #000
+                text-decoration: none
+
+            > a
+                padding: 15px 0
+                font-size: 18px
+
+
+            > ul li
+                a
+                    font-size: 14px
+                    padding: 5px 0
+
+                &.active a
+                    font-weight: bold
+
+body
+    margin: 80px 0
+    background-color: #e8eced
+
+    .slogan
+        background-color: #fff
+        text-align: center
+        font-size: 24px
+        padding-top: 30px
+        height: 120px
+
+    .busca-wrapper
+        padding: 0 80px 0 110px
+
+
+    input.busca
+        padding: 20px
+        width: 100%
+        font-size: 20px
+        background-color: #ccc
+        border: 1px solid #bfbfbf
+        box-shadow: 4px 4px 0 #003c71
+
+    h2
+        background-image: url(seta.jpg)
+        background-repeat: no-repeat
+        line-height: 50px
+        padding-top: 0px
+        padding-left: 60px
+        margin-left: -63px
+        font-size: 30px
+        font-weight: 100
+
+    .shadow
+        background-image: url(sombra.jpg)
+        background-repeat: no-repeat
+
+    .vert-shadow
+        background-image: url(sombra-vertical.jpg)
+        background-repeat: no-repeat
+
+
+
+
+
+
+
+
+
+
+
+
