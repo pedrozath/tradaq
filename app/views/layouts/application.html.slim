@@ -54,14 +54,102 @@ body
                         li= link_to "Saúde e Beleza"
                         li= link_to "Serviços Corporativos"
 
-                = link_to "Nova Categoria", class: "btn"
-                = link_to "Novo Anúncio", class: "btn"
+                = link_to "Nova Categoria", "#", class: "btn"
+                = link_to "Novo Anúncio", "#", class: "btn"
 
-            .col-3.vert-shadow
-                .breadcrumbs Você buscou por > Restaurantes > Bar e Restaurante Ilha das Flores
+            .col-3.contents.vert-shadow
+                .breadcrumbs
+                    | Você buscou por > Restaurantes >
+                    strong  Bar e Restaurante Ilha das Flores
 
-                = image_tag "no-photo.png"
-                h3 Nome ou Título
-                p Descrição principal. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .row
+                    .col-1.logo-empresa
+                        = image_tag "image-placeholder.jpg"
 
-                .detalhes
+                    .col-2.descricao-empresa
+                        h3 Nome ou Título
+                        p Descrição principal. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+                        p.texto-legal
+                            | Restrições: 10% de serviço pagos em dinheiro.
+                            br
+                            | Site: www.barilhadasflores.com.br
+                            br
+                            | Endereço: Rua dos Curumins. nº 5 – São Paulo – SP
+
+                .row
+                    .col-4.cem-porcento-permuta
+                        = image_tag "permuta-icon.jpg"
+
+                        span
+                            | 100% permuta
+
+                .row
+                    .col-1.map
+                        = image_tag "map-placeholder.jpg"
+
+                    .col-2.photos
+                        = image_tag "add-photo.jpg"
+
+                .row
+                    .col-3
+                        .push-right
+                            = link_to "categorizar", "#", class: "btn"
+                            = link_to "voltar", "#", class: "btn"
+
+                .row
+                    .col-4.relacionados
+                        h3.seta Relacionados
+                        ul
+                            li
+                                = image_tag "cafe-caviar.jpg"
+                                h4 Café Caviar
+                                = link_to "saiba mais...", "#"
+
+                            li
+                                = image_tag "choppodromo.jpg"
+                                h4 Choppódromo
+                                = link_to "saiba mais...", "#"
+
+                            li
+                                = image_tag "vila-country.jpg"
+                                h4 Vila Country
+                                = link_to "saiba mais...", "#"
+
+                            li
+                                = image_tag "cafe-caviar.jpg"
+                                h4 Café Caviar
+                                = link_to "saiba mais...", "#"
+
+        footer.container
+            .row
+                .col-left
+                    h3.seta Contato
+                    p Tel.: 11 3508 4100
+                    p contato@tradaq.com.br
+                    p Avenida Bridadeiro Faria Lima, 2012 cj 134
+                        br
+                        | Jardim Paulistano – São Paulo – SP
+
+                .col-right
+                    p Para obter mais informações entre em contato conosco preenchendo o formulário disponível no link abaixo.
+
+                    = link_to "Entre em contato", "#", class: "btn"
+
+            .row.yellow-border
+                .col-right
+                    p.copyright
+                        | Copyright ₢ 2015 Tradaq – Permutas Corporativas.
+                        = image_tag "logo-tradaq-small-preto.jpg"
+
+
+
+
+
+
+
+
+
+
+
+
