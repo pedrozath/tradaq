@@ -36,6 +36,10 @@ a
 .push-right
     float: right
 
+header
+    .expand.open
+        height: 240px
+
 nav h3, .btn, .seta
     background-image: url(seta-menu.jpg)
     background-repeat: no-repeat
@@ -61,8 +65,12 @@ ul
 nav
     padding-left: 50px
 
-    h3
+    .btn
+        text-transform: uppercase
+        background: none
+        font-weight: 100
 
+    h3
 
     ul
 
@@ -96,149 +104,158 @@ body
     margin-bottom: 0
     background-color: #e8eced
 
-    .slogan
-        background-color: #fff
-        text-align: center
-        font-size: 24px
-        padding-top: 30px
-        height: 120px
+.logo
+    background-color: #003c71
 
-    .busca-wrapper
-        padding: 0 80px 0 110px
+    &.open
+        padding-top: 60px
+
+.slogan
+    background-color: #fff
+    text-align: center
+    font-size: 24px
+    padding-top: 30px
+    height: 120px
+
+.menu
+    background-color: #000
+
+.busca-wrapper
+    padding: 0 80px 0 110px
 
 
-    input.busca
-        padding: 20px
-        width: 100%
-        font-size: 20px
-        background-color: #ccc
-        border: 1px solid #bfbfbf
-        box-shadow: 4px 4px 0 #003c71
+input.busca
+    padding: 20px
+    width: 100%
+    font-size: 20px
+    background-color: #ccc
+    border: 1px solid #bfbfbf
+    box-shadow: 4px 4px 0 #003c71
 
-    h2
-        background-image: url(seta.jpg)
-        background-repeat: no-repeat
-        line-height: 50px
-        padding-top: 0px
-        padding-left: 60px
-        margin-left: -63px
-        font-size: 30px
-        font-weight: 100
+h2
+    background-image: url(seta.jpg)
+    background-repeat: no-repeat
+    line-height: 50px
+    padding-top: 0px
+    padding-left: 60px
+    margin-left: -63px
+    font-size: 30px
+    font-weight: 100
 
-    .shadow
-        background-image: url(sombra.jpg)
-        background-repeat: no-repeat
+.shadow
+    background-image: url(sombra.jpg)
+    background-repeat: no-repeat
 
-    .vert-shadow
-        background-image: url(sombra-vertical.jpg)
-        background-repeat: no-repeat
-        background-position: 0 10px
+.vert-shadow
+    background-image: url(sombra-vertical.jpg)
+    background-repeat: no-repeat
+    background-position: 0 10px
 
-    .contents
-        padding-top: 24px
-        height: 1024px
+.contents
+    padding-top: 24px
+    height: 1024px
 
-    .breadcrumbs
-        padding-bottom: 25px
-        padding-left: 30px
-        font-family: verdana
-        font-size: 12px
+.breadcrumbs
+    padding-bottom: 25px
+    padding-left: 30px
+    font-family: verdana
+    font-size: 12px
 
-    .logo-empresa, .map
-        padding-left: 12px
+.logo-empresa, .map
+    padding-left: 12px
 
-    .descricao-empresa, .photos
-        padding-left: 30px
+.descricao-empresa, .photos
+    padding-left: 30px
 
-    .descricao-empresa
-        font-family: verdana
-        font-size: 14px
+.descricao-empresa
+    font-family: verdana
+    font-size: 14px
 
-        h3
-            font-size: 16px
-            font-weight: bold
+    h3
+        font-size: 16px
+        font-weight: bold
 
-    .cem-porcento-permuta
-        margin-top: 13px
-        padding-left: 67px
-        padding-bottom: 20px
-        font-family: verdana
-        font-size: 14px
+.cem-porcento-permuta
+    margin-top: 13px
+    padding-left: 67px
+    padding-bottom: 20px
+    font-family: verdana
+    font-size: 14px
 
-        img
-            display: inline
-            vertical-align: middle
-            margin-right: 10px
+    img
+        display: inline
+        vertical-align: middle
+        margin-right: 10px
 
-        span
-            display: inline-block
-            padding-top: -10px
+    span
+        display: inline-block
+        padding-top: -10px
 
-    .texto-legal
-        font-size: 12px
+.texto-legal
+    font-size: 12px
 
-    .relacionados
-        padding-top: 40px
+.relacionados
+    padding-top: 40px
 
-        ul
-            li
-                width: 175px
-                float: left
-                text-align: center
-
-                h4
-                    font-weight: 500
-                    font-size: 18px
-                    margin: 6px 0
-
-                a
-                    font-weight: 500
-                    font-size: 14px
-
-                + li
-                    border-left: 1px solid #b5b5b5
-
-                img
-                    border: 1px solid #b5b5b5
-
-    footer
-        padding: 17px 35px
-        background-color: #333333
-        color: #ccc
-        font-family: Verdana
-        font-size: 12px
-        display: table
-
-        > .row > *
-            width: 345px
+    ul
+        li
+            width: 175px
             float: left
+            text-align: center
 
-        .col-right
-            float: right
+            h4
+                font-weight: 500
+                font-size: 18px
+                margin: 6px 0
 
-        h3.seta
-            margin-left: 0
-            background-image: url(seta-fundo-preto.jpg)
+            a
+                font-weight: 500
+                font-size: 14px
 
-        .btn
-            background-color: #000
-            padding-top: 15px
-            padding-bottom: 5px
-            line-height: 14px
-            background-position: 10px 9px
-            font-size: 14px
-            height: 46px
-            padding-left: 44px
-            color: #ccc
-            margin: 0
+            + li
+                border-left: 1px solid #b5b5b5
 
-        .row.yellow-border
-            border-top: 2px solid #cccc99
+            img
+                border: 1px solid #b5b5b5
 
-        .copyright
-            font-size: 12px
-            vertical-align: middle
-            line-height: 40px
+footer
+    padding: 17px 35px
+    background-color: #333333
+    color: #ccc
+    font-family: Verdana
+    font-size: 12px
+    display: table
+
+    > .row > *
+        width: 345px
+        float: left
+
+    .col-right
+        float: right
+
+    h3.seta
+        margin-left: 0
+        background-image: url(seta-fundo-preto.jpg)
+
+    .btn
+        background-color: #000
+        padding-top: 15px
+        padding-bottom: 5px
+        line-height: 14px
+        background-position: 10px 9px
+        font-size: 14px
+        height: 46px
+        padding-left: 44px
+        color: #ccc
+        margin: 0
+
+    .row.yellow-border
+        border-top: 2px solid #cccc99
+
+    .copyright
+        font-size: 12px
+        vertical-align: middle
+        line-height: 40px
 
 
 
