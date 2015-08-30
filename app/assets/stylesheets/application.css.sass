@@ -1,5 +1,13 @@
 // @import "grid"
 
+@for $i from 0 through 4
+    $weight: $i*200+100
+
+    @font-face
+        font-family: "Montserrat"
+        font-weight: $weight
+        src: url(Montserrat-#{$weight}.otf)
+
 *
     box-sizing: border-box
 
@@ -21,6 +29,37 @@
     .row-#{$i} > *
         height: 120px * $i
 
+.area-restrita
+    > *
+        display: block
+
+    .login-box
+        padding: 20px
+        padding-right: 40px
+        background-color: #333
+        color: #ccc
+        font-size: 14px
+        height: 0
+
+        &.open
+            opacity: 1
+            height: 256px
+
+        .inline-input
+            padding: 7px 0
+            display: table
+            width: 100%
+
+            label
+                display: block
+                float: left
+
+                &::after
+                    content: ":"
+
+            input
+                float: right
+
 body, input
     font-family: "Montserrat"
     font-weight: 100
@@ -37,11 +76,12 @@ a
     float: right
 
 header
-    .expand.open
-        height: 240px
+    .expand
+        > .open
+            height: 240px
 
 nav h3, .btn, .seta
-    background-image: url(seta-menu.jpg)
+    background-image: url(seta-menu.png)
     background-repeat: no-repeat
     padding-left: 40px
     margin: 0
@@ -60,7 +100,6 @@ nav h3, .btn, .seta
 ul
     display: block
     list-style-type: none
-    padding: 0
 
 nav
     padding-left: 50px
@@ -117,8 +156,45 @@ body
     padding-top: 30px
     height: 120px
 
+    &.open
+        padding-top: 90px
+
 .menu
     background-color: #000
+
+    nav
+        position: relative
+        opacity: 0
+        z-index: 5
+        padding-left: 30px
+
+        ul
+            padding: 0
+
+        a
+            color: #999
+            font-size: 16px
+            font-weight: 300
+            padding: 7px 0
+            padding-left: 30px
+
+            &:hover
+                background-image: url(seta-menu.png)
+                background-repeat: no-repeat
+                background-position: 0 6px
+                font-weight: 500
+                color: #cccc99
+
+        &.open
+            opacity: 1
+
+    .menu-btn
+        opacity: 1
+        display: block
+
+        &.open
+            opacity: 0
+            height: 0
 
 .busca-wrapper
     padding: 0 80px 0 110px
@@ -257,6 +333,4 @@ footer
         vertical-align: middle
         line-height: 40px
 
-
-
-
+@import "slider"
