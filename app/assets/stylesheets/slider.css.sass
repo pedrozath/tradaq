@@ -1,10 +1,39 @@
 .slider
+    clear: both
     position: relative
     height: 360px
-    margin-left: -18px
+    margin-left: -20px
     overflow: hidden
+    width: 1060px
 
     .slides > *
         position: absolute
         top: 360px
         left: 0
+
+        &.current
+            top: 0
+
+        &.gone
+            top: auto
+            bottom: 360px
+
+    .counter
+        position: absolute
+        right: 0px
+        bottom: 0px
+        padding: 10px
+        z-index: 2
+        display: table
+
+        > *
+            border-radius: 10px
+            display: inline-block
+            width: 10px
+            height: 10px
+            margin: 5px
+            background: #000
+            opacity: 0.3
+
+            &.current
+                opacity: 0.8

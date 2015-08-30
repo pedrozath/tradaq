@@ -6,7 +6,7 @@ head
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-body
+body class=params[:action]
     header.container
         .row.row-1.expand
             .col-1.logo= image_tag "tradaq-logo.png"
@@ -37,6 +37,14 @@ body
                         label senha
                         input type="password"
 
+        .slider
+            .counter
+                - 5.times do
+                    span
+            .slides
+                - 5.times do
+                    = image_tag "slide-1.jpg", size: "1060x360"
+
         .row.row-2
             .col-3.busca-wrapper
                 h2 Busca
@@ -46,11 +54,7 @@ body
             .col-1.seja-associado
                 = image_tag "seja-associado.jpg"
 
-        .slider
-            .counter
-            .slides
-                - 5.times do
-                    = image_tag "slide-1.jpg", size: "1060x360"
+    = yield
 
     footer.container
             .row
