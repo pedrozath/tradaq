@@ -3,13 +3,14 @@ class Slider
         @[key] = value for key, value of options
         @cs = 0
         @slides.first().addClass("current")
-        @delay = 3000
+        @delay = 5000
         @transition_time = 1
         @play()
         @counter_bullets = @counter.children()
 
     play: ->
-        setTimeout =>
+        clearTimeout @play_timer
+        @play_timer = setTimeout =>
             if @cs < @slides.size()-1
                 @goto @cs+1, @cs
             else

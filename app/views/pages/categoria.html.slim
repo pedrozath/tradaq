@@ -1,0 +1,19 @@
+- content_for :header
+    = render "busca"
+
+main.container.shadow
+    .row
+        = render partial: "category_navbar"
+        .col-3.contents.vert-shadow
+            = image_tag "topo-categoria.jpg"
+            .breadcrumbs
+                | Gastronomia >
+                strong  Restaurantes
+
+            ul.anuncios
+                - 9.times do
+                    li
+                        = image_tag "cafe-caviar.jpg"
+                        h4 Café Caviar
+                        p A proposta do Café Caviar é Geral
+                        = link_to "saiba mais...", "anuncio_isolado"

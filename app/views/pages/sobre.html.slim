@@ -1,0 +1,66 @@
+- content_for :header
+    = image_tag "slide-2.jpg", class: "center"
+
+main.container
+
+    p style="padding: 0 60px; text-align: center" Oferece uma ampla rede de associados que por meio de seus produtos e serviços transformam capacidade ociosa e estoques parados em dinheiro e liquidez para seus negócios. Sua sede está baseada em São Paulo, de onde realiza operações comerciais que alcançam as praças do interior e litoral do estado, além do Rio de Janeiro e Belo Horizonte. É afiliada à IRTA – International Reciprocal Trade Association, organização internacional que promove os interesses da indústria de permuta pelo mundo.
+
+    h2 style="background: none; text-align: center" Benefícios Tradaq
+
+.tradaq-poetry.pattern
+    .container
+        markdown:
+            **O aumento do lucro**  
+            por meio de vendas  
+            adicionais sem  
+            desembolso de dinheiro
+
+            **Troca** do que a  
+            empresa possui por  
+            aquilo que ela precisa;
+
+            **Redução** da  
+            capacidade ociosa e  
+            de estoques parados;
+
+            **Multiplicação** da força de  
+            vendas por meio de equipe  
+            comercial preparada
+
+            **Novos Clientes**  
+            para a empresa;
+
+            **Divulgação** dos produtos e  
+            serviços para as empresas  
+            associadas à rede;
+
+            **Premiação ou**  
+            **bonificação** de colaboradores  
+            por meio de permuta
+
+.modelo-da-tradaq style="background: url(#{image_url "modelo-da-tradaq.jpg"}) top center no-repeat; height: 400px;"
+
+.pattern
+    .container
+        ul.vantagens
+            li
+                = image_tag "icon-1.png"
+                markdown:
+                    Sistema online para compra e venda de produtos e serviços de forma autônoma pelo cliente;
+
+            li
+                = image_tag "icon-2.png"
+                markdown:
+                    Sistema de back office de ultima geração para controle das contas dos associados;
+
+            li
+                = image_tag "icon-3.png"
+                markdown:
+                    Atendimento personalizado com equipe comercial capacitada;
+            li
+                = image_tag "icon-4.png"
+                markdown:
+                    Eventos mensais/bimestrais de relacionamento e interação com clientes.
+
+.container= render "busca"
+.container= render "categorias"

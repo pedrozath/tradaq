@@ -9,7 +9,8 @@ head
 body class=params[:action]
     header.container
         .row.row-1.expand
-            .col-1.logo= image_tag "tradaq-logo.png"
+            .col-1.logo
+                = link_to image_tag("tradaq-logo.png"), "/"
             .col-1.slogan
                 | Conectando
                 br
@@ -19,15 +20,15 @@ body class=params[:action]
                 = link_to image_tag("menu.png"), "#", class: "menu-btn"
                 nav
                     ul
-                        li= link_to "A Tradaq"
-                        li= link_to "Porque permutar"
+                        li= link_to "A Tradaq", "/sobre"
+                        li= link_to "Porque permutar", "/permuta"
                         li= link_to "Shopping"
                         li= link_to "Na mídia"
-                        li= link_to "FAQ"
-                        li= link_to "Contato"
+                        li= link_to "FAQ", "/faq"
+                        li= link_to "Contato", "/contato"
 
             .col-1.area-restrita
-                = image_tag "area-restrita.png"
+                = image_tag "area-restrita.png", size: "256x120"
                 .login-box
                     .inline-input
                         label login
@@ -37,23 +38,8 @@ body class=params[:action]
                         label senha
                         input type="password"
 
-        .slider
-            .counter
-                - 5.times do
-                    span
-            .slides
-                - 5.times do
-                    = image_tag "slide-1.jpg", size: "1060x360"
-
-        .row.row-2
-            .col-3.busca-wrapper
-                h2 Busca
-                input.busca
-
-
-            .col-1.seja-associado
-                = image_tag "seja-associado.jpg"
-
+        = yield :header
+        
     = yield
 
     footer.container

@@ -15,3 +15,9 @@ $ ->
         wrapper: $(".slider")
         slides: $(".slides > *")
         counter: $(".slider .counter")
+
+    # menu.open()
+
+    $(".perguntas h2").on "click", ->
+        $(".perguntas > p").slideUp(200)
+        $(this).next().slideDown(200)

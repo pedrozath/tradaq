@@ -1,20 +1,5 @@
-.container
-    main
-        h3 Todas as categorias
+- content_for :header
+    = render "busca"
+    = render "slider"
 
-        ul.table-list
-            li= link_to "Automotivo"
-            li= link_to "Eventos"
-            li= link_to "Hotéis"
-            li= link_to "Moda"
-            li= link_to "Cursos e Treinamentos"
-            li= link_to "Imóveis"
-            li= link_to "Marketing"
-            li= link_to "Saúde e Beleza"
-            li= link_to "Decoração"
-            li= link_to "Info, Telefonia e TI"
-            li= link_to "Mídia"
-            li= link_to "Serviços Corporativos"
-            li= link_to "Entretenimento"
-            li= link_to "Gastronomia"
-            li= link_to "Mobiliário Corporativo"
+    main= render "categorias"
