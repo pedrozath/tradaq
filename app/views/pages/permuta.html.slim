@@ -1,40 +1,54 @@
 .background-center style="background-image: url(#{image_url "permuta-banner" }); height: 543px"
 
 main.transparent
-    h2 Uma rede. Várias possibilidades.
+    .container
+        h2 Uma rede. Várias possibilidades.
 
-    p Uma empresa que deseja participar da rede se associa. A partir do momento em que ela faz sua primeira venda de um produto ou serviço, é remunerada com uma moeda interna da rede, chamada Único (Un$). A empresa pode então utilizar seu crédito em únicos para comprar qualquer produto ou serviço que quiser e que esteja disponível.
+        .center-block: p Uma empresa que deseja participar da rede se associa. A partir do momento em que ela faz sua primeira venda de um produto ou serviço, é remunerada com uma moeda interna da rede, chamada Único (Un$). A empresa pode então utilizar seu crédito em únicos para comprar qualquer produto ou serviço que quiser e que esteja disponível.
 
-.pattern: p= image_tag "esquema-permuta", size: "725x474"
+    .pattern: p style="text-align: center"= image_tag "esquema-permuta", size: "725x474"
 
-.background-center style="background-image: url(#{image_url "permuta-banner-2" }); height: 446px"
+    .background-center style="background-image: url(#{image_url "permuta-banner-2" }); height: 446px"
 
-h2 Permuta multilateral no Mundo
+    .container
+        h2 Permuta multilateral no Mundo
 
-markdown: 
-    A indústria da permuta corporativa vem retomando fôlego nos últimos 5 anos e movimenta mais de US$ 20 bilhões de dólares.
+        .center-block
+            markdown: 
+                A indústria da permuta corporativa vem retomando fôlego nos últimos 5 anos e movimenta mais de US$ 20 bilhões de dólares.
 
-.container
-    ul.motivos
-        li
-            = image_tag "motivo-1"
-            markdown:
-                De acordo com estimativas da IRTA.
-                aproximadamente 470.000 empresas
-                permutam um total de US$ 4,5 bilhões
-                de dólares em vendas anuais.
+    .container
+        ul.motivos
+            li
+                = image_tag "motivo-1"
+                markdown:
+                    De acordo com estimativas da IRTA.
+                    aproximadamente 470.000 empresas
+                    permutam um total de US$ 4,5 bilhões
+                    de dólares em vendas anuais.
 
-        li
-            = image_tag "motivo-2"
-            markdown:
-                Das empresas listadas na Bolsa de
-                Valores de Nova York (NYSE),
-                65% utilizam permuta.
+            li
+                = image_tag "motivo-2"
+                markdown:
+                    Das empresas listadas na Bolsa de
+                    Valores de Nova York (NYSE),
+                    65% utilizam permuta.
 
-        li
-            = image_tag "motivo-3"
-            markdown:
-                O Departamento de Comércio dos
-                Estados Unidos estima que 20-25%
-                do comércio mundial é composto
-                por permuta.
+            li
+                = image_tag "motivo-3"
+                markdown:
+                    O Departamento de Comércio dos
+                    Estados Unidos estima que 20-25%
+                    do comércio mundial é composto
+                    por permuta.
+
+    .pattern: .container
+        h2 O que os clientes dizendo:
+        .center-block
+            p 
+                | "Sempre, o que mais nos chamou a atenção é como a TRADAQ conduz parcerias: com muita transparênci ae honestidade. É muito bom fazer parte deste grupo."
+                
+                br
+                small João Marcelo Issa Costa. Diretor Comercial da Casa Mineira Decorações
+
+    .container= render "busca"

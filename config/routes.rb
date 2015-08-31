@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     get "faq", to: "pages#faq"
     get "contato", to: "pages#contato"
     get "permuta", to: "pages#permuta"
+    get "*path", to: "pages#not_found"
 end
