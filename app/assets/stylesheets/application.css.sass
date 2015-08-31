@@ -13,7 +13,7 @@ $oliva: #cccc99
     @font-face
         font-family: "Montserrat"
         font-weight: $weight
-        src: url(Montserrat-#{$weight}.otf)
+        src: asset-url("Montserrat-#{$weight}.otf")
 
 *
     box-sizing: border-box
@@ -86,7 +86,7 @@ main.white-background
         h2
             font-size: 18px
             text-align: left
-            background-image: url(seta-preta-small.png)
+            background-image: asset-url("seta-preta-small.png")
             background-position: 0 0 
             background-repeat: no-repeat
             padding-left: 40px
@@ -139,7 +139,7 @@ main.white-background
         float: left
 
 .pattern
-    background-image: url(tradaq-pattern-1.jpg)
+    background-image: asset-url("tradaq-pattern-1.jpg")
     padding: 20px 0
 .tradaq-poetry
 
@@ -200,7 +200,7 @@ ul.table-list
     input[type="submit"]
         border: none
         background-color: transparent
-        background-image: url(seta-preta-small.png)
+        background-image: asset-url("seta-preta-small.png")
         background-repeat: no-repeat
         padding-left: 30px
         margin: 0 auto
@@ -293,7 +293,7 @@ header
             height: 240px
 
 nav h3, .btn, .seta, h3.com-seta
-    background-image: url(seta-menu.png)
+    background-image: asset-url("seta-menu.png")
     background-repeat: no-repeat
     padding-left: 40px
     margin: 0
@@ -400,7 +400,7 @@ body
             padding-left: 30px
 
             &:hover
-                background-image: url(seta-menu.png)
+                background-image: asset-url("seta-menu.png")
                 background-repeat: no-repeat
                 background-position: 0 6px
                 font-weight: 500
@@ -430,7 +430,7 @@ input.busca
     background-color: #ccc
     border: 1px solid $cinza
     box-shadow: 4px 4px 0 $azul-tradaq
-    background-image: url(lupa.png)
+    background-image: asset-url("lupa.png")
     background-repeat: no-repeat
     background-position: 98%
 
@@ -449,7 +449,7 @@ main h2
         + p
             margin-top: 20px
 h2.com-seta
-    background-image: url(seta.jpg)
+    background-image: asset-url("seta.jpg")
     background-repeat: no-repeat
 
 header, .busca-wrapper
@@ -462,12 +462,12 @@ header, .busca-wrapper
         font-weight: 100
 
 .shadow
-    background-image: url(sombra.png)
+    background-image: asset-url("sombra.png")
     background-position: top center
     background-repeat: no-repeat
 
 .vert-shadow
-    background-image: url(sombra-vertical.jpg)
+    background-image: asset-url("sombra-vertical.jpg")
     background-repeat: no-repeat
     background-position: 0 10px
 
