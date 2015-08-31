@@ -1,4 +1,11 @@
-// @import "grid"
+$branco: #fff// @import "grid"
+$preto: #000
+$cinza: #d2d2d2
+$cinza-escuro: #b5b5b5
+$cinza-bem-escuro: #333333
+$azul-tradaq: #003c71
+$gelo: #e8eced
+$oliva: #cccc99
 
 @for $i from 0 through 4
     $weight: $i*200+100
@@ -19,6 +26,26 @@ h1
     text-align: center
     font-weight: 100
 
+.depoimentos
+    font-weight: 300
+    height: 300px
+    position: relative
+    display: hidden
+
+    // .depoimento, .depoimento.gone
+    //     opacity: 0
+
+    //     &.current
+    //         opacity: 1
+
+    nav
+        padding: 0
+        display: table
+        margin: 0 auto
+
+        > * + *
+            margin-left: 20px
+
 .center-block p
     width: 65%
     margin: 30px auto
@@ -27,6 +54,7 @@ h1
 .motivos
     padding: 40px 0
     display: table
+    text-align: center
 
     p
         width: 100% !important
@@ -48,7 +76,7 @@ main.transparent
     background-color: transparent
 
 main.white-background
-    background-color: #fff
+    background-color: $branco
 
 .faq main
     padding: 60px
@@ -88,7 +116,7 @@ main.white-background
         font-size: 14px
         font-weight: 300
         text-align: center
-        border: 1px solid #000
+        border: 1px solid $preto
         width: 250px
         height: 200px
         float: left
@@ -105,16 +133,16 @@ main.white-background
         margin-left: 12px
         margin-top: 12px
         width: 244px
-        border: 1px solid #d2d2d2
+        border: 1px solid $cinza
         display: block
-        background-color: #fff
+        background-color: $branco
         float: left
 
 .pattern
     background-image: url(tradaq-pattern-1.jpg)
     padding: 20px 0
-
 .tradaq-poetry
+
     padding: 25px 0
 
     p
@@ -127,7 +155,7 @@ main.white-background
             padding-left: 0
 
 .bloco-categorias
-    background-color: #fff
+    background-color: $branco
     padding: 30px 50px
 
 
@@ -184,7 +212,7 @@ ul.table-list
     input, textarea
         width: 100%
         border-radius: 5px
-        border: 1px solid #b5b5b5
+        border: 1px solid $cinza-escuro
 
     label, input
         display: block
@@ -211,8 +239,8 @@ ul.table-list
 
     .login-box
         padding: 0px
-        background-color: #333
-        color: #ccc
+        background-color: $cinza-bem-escuro
+        color: $cinza-escuro
         font-size: 14px
         height: 0
         display: none
@@ -252,7 +280,7 @@ h1, h2, h3, h4, h5
     font-weight: 300
 
 a
-    color: #000
+    color: $preto
     text-decoration: none
     font-weight: 500
 
@@ -264,13 +292,13 @@ header
         > .open
             height: 240px
 
-nav h3, .btn, .seta
+nav h3, .btn, .seta, h3.com-seta
     background-image: url(seta-menu.png)
     background-repeat: no-repeat
     padding-left: 40px
     margin: 0
-    padding-right: 60px
     line-height: 24px
+    padding-right: 60px
     margin-left: -40px
 
 .btn
@@ -286,55 +314,64 @@ ul
     list-style-type: none
 
 nav
-    padding-left: 50px
+    padding-left: 30px
+    padding-right: 0px
 
     .btn
         text-transform: uppercase
         background: none
         font-weight: 100
 
-    h3
-
-    ul
-
     > ul
+        margin-bottom: 0
 
         li, li a
             display: block
+            font-weight: 300
 
         > li
+
+            h3
+                font-size: 14px
+                font-weight: 500
+
             a
                 width: 100%
 
             > a
-                padding: 15px 0
-                font-size: 18px
+                padding: 10px 0
+                font-size: 14px
 
-            > ul li
-                a
-                    font-size: 12px
-                    padding: 5px 0
-                    font-family: Verdana
+            > ul 
+                padding: 0
 
-                &.active a
-                    font-weight: bold
+                li
+                    a
+                        font-size: 12px
+                        padding: 5px 0
+                        font-family: Verdana
 
-                .btn
-                    display: block
+                    &.active a
+                        font-weight: bold
+
+    .btn
+        display: block
+        padding: 10px 0 0 80px
+        font-weight: 300
 
 body
     margin: 0
     margin-bottom: 0
-    background-color: #e8eced
+    background-color: $gelo
 
 .logo
-    background-color: #003c71
+    background-color: $azul-tradaq
 
     &.open
         padding-top: 60px
 
 .slogan
-    background-color: #fff
+    background-color: $branco
     text-align: center
     font-size: 24px
     padding-top: 30px
@@ -344,7 +381,7 @@ body
         padding-top: 90px
 
 .menu
-    background-color: #000
+    background-color: $preto
 
     nav
         position: relative
@@ -356,10 +393,10 @@ body
             padding: 0
 
         a
-            color: #999
+            color: $cinza-escuro
             font-size: 16px
             font-weight: 300
-            padding: 7px 0
+            padding: 5px 0
             padding-left: 30px
 
             &:hover
@@ -367,7 +404,7 @@ body
                 background-repeat: no-repeat
                 background-position: 0 6px
                 font-weight: 500
-                color: #cccc99
+                color: $oliva
 
         &.open
             opacity: 1
@@ -391,8 +428,8 @@ input.busca
     width: 100%
     font-size: 20px
     background-color: #ccc
-    border: 1px solid #bfbfbf
-    box-shadow: 4px 4px 0 #003c71
+    border: 1px solid $cinza
+    box-shadow: 4px 4px 0 $azul-tradaq
     background-image: url(lupa.png)
     background-repeat: no-repeat
     background-position: 98%
@@ -415,16 +452,18 @@ h2.com-seta
     background-image: url(seta.jpg)
     background-repeat: no-repeat
 
-header h2.com-seta
-    padding-left: 60px
-    margin-left: -63px
-    line-height: 50px
-    padding-top: 0px
-    font-size: 30px
-    font-weight: 100
+header, .busca-wrapper
+    h2.com-seta
+        padding-left: 60px
+        margin-left: -63px
+        line-height: 50px
+        padding-top: 0px
+        font-size: 30px
+        font-weight: 100
 
 .shadow
-    background-image: url(sombra.jpg)
+    background-image: url(sombra.png)
+    background-position: top center
     background-repeat: no-repeat
 
 .vert-shadow
@@ -435,6 +474,9 @@ header h2.com-seta
 .contents
     padding-top: 24px
     height: 1024px
+
+    &.no-top-spacing
+        padding-top: 0
 
 .breadcrumbs
     padding-bottom: 25px
@@ -486,10 +528,10 @@ header h2.com-seta
 
 
             + li
-                border-left: 1px solid #b5b5b5
+                border-left: 1px solid $cinza-escuro
 
             img
-                border: 1px solid #b5b5b5
+                border: 1px solid $cinza-escuro
 
 
 .anuncios, .relacionados
@@ -502,11 +544,15 @@ header h2.com-seta
         font-weight: 500
         font-size: 14px
 
+    p
+        font-family: Verdana
+        font-size: 12px
+
 
 footer
     padding: 17px 35px
-    background-color: #333333
-    color: #ccc
+    background-color: $cinza-bem-escuro
+    color: $cinza
     font-family: Verdana
     font-size: 12px
     display: table
@@ -520,10 +566,9 @@ footer
 
     h3.seta
         margin-left: 0
-        background-image: url(seta-fundo-preto.jpg)
 
     .btn
-        background-color: #000
+        background-color: $preto
         padding-top: 15px
         padding-bottom: 5px
         line-height: 14px
@@ -535,7 +580,7 @@ footer
         margin: 0
 
     .row.yellow-border
-        border-top: 2px solid #cccc99
+        border-top: 2px solid $oliva
 
     .copyright
         font-size: 12px

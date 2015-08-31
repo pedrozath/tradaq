@@ -42,13 +42,18 @@ main.transparent
                     do comércio mundial é composto
                     por permuta.
 
-    .pattern: .container
+    .depoimentos.pattern: .container
         h2 O que os clientes dizendo:
         .center-block
-            p 
-                | "Sempre, o que mais nos chamou a atenção é como a TRADAQ conduz parcerias: com muita transparênci ae honestidade. É muito bom fazer parte deste grupo."
-                
-                br
-                small João Marcelo Issa Costa. Diretor Comercial da Casa Mineira Decorações
+            - 1.times
+                p.depoimento 
+                    | "Sempre, o que mais nos chamou a atenção é como a TRADAQ conduz parcerias: com muita transparência e honestidade. É muito bom fazer parte deste grupo."
+                    
+                    br
+                    small João Marcelo Issa Costa. Diretor Comercial da Casa Mineira Decorações
+
+        nav
+            = link_to image_tag("seta-preta-esquerda")
+            = link_to image_tag("seta-preta-small")
 
     .container= render "busca"

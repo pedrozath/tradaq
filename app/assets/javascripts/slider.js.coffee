@@ -6,20 +6,32 @@ class Slider
         @delay = 5000
         @transition_time = 1
         @play()
-        @counter_bullets = @counter.children()
+
+        @no_counter = true
+        if @counter? then @no_counter = false
+
+        unless @no_counter
+            @counter_bullets = @counter.children()
+            @counter_bullets.on "click", (e) => 
+                @stop()
+                @goto $(e.currentTarget).index()
+                @play()
+
+    stop: -> clearTimeout @play_timer
 
     play: ->
         clearTimeout @play_timer
         @play_timer = setTimeout =>
             if @cs < @slides.size()-1
-                @goto @cs+1, @cs
+                @goto @cs+1
             else
-                @goto 0, @cs
+                @goto 0
 
             @play()
         , @delay
 
     goto: (b, a) ->
+        a ?= @cs
         @current_slide = @slides.eq(a)
         @new_slide = @slides.eq(b)
         @other_slides = @slides.not(@new_slide)
@@ -35,7 +47,8 @@ class Slider
 
         @cs = b
 
-        @counter_bullets.removeClass("current")
-        @counter_bullets.eq(b).addClass("current")
+        unless @no_counter
+            @counter_bullets.removeClass("current")
+            @counter_bullets.eq(b).addClass("current")
 
 @Slider = Slider

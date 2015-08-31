@@ -16,6 +16,10 @@ $ ->
         slides: $(".slides > *")
         counter: $(".slider .counter")
 
+    depoimentos = new Slider
+        wrapper: $(".depoimentos")
+        slides: $(".depoimentos .depoimento")
+
     # menu.open()
 
     $(".perguntas h2").on "click", ->
