@@ -20,8 +20,10 @@ $ ->
         wrapper: $(".depoimentos")
         slides: $(".depoimentos .depoimento")
 
-    # menu.open()
-
     $(".perguntas h2").on "click", ->
         $(".perguntas > p").slideUp(200)
         $(this).next().slideDown(200)
+
+    $("form.area-restrita").on "keyup", (e) ->
+        if e.which is 13
+            $(e.currentTarget).submit()

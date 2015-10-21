@@ -7,6 +7,8 @@ head
     = csrf_meta_tags
 
 body class=params[:action]
+    - if user_signed_in? 
+        .admin-bar Você está logado como #{current_user.email} / #{link_to "Sair", destroy_user_session_path, method: "delete"}
     header.container
         .row.row-1.expand
             .col-1.logo
@@ -30,13 +32,14 @@ body class=params[:action]
             .col-1.area-restrita
                 = image_tag "area-restrita.png", size: "256x120"
                 .login-box
-                    .inline-input
-                        label login
-                        input
+                    = form_for User.new, url: new_user_session_path, class: "area-restrita" do |f|
+                        .inline-input
+                            label login
+                            = f.text_field :email
 
-                    .inline-input
-                        label senha
-                        input type="password"
+                        .inline-input
+                            label senha
+                            = f.password_field :password
 
         = yield :header
         
