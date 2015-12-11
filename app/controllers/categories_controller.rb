@@ -8,4 +8,8 @@ class CategoriesController < ApplicationController
         Category.find(params[:id]).destroy
         redirect_to :back
     end
+
+    def show
+        @current_category = Category.find(params[:id])
+    end
 end

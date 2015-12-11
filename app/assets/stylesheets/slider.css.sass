@@ -1,10 +1,14 @@
 .slider
+    display: none
     clear: both
     position: relative
     height: 360px
     margin-left: -20px
     overflow: hidden
     width: 1060px
+
+    +mobile
+        width: 100%
 
     .slides > *
         position: absolute

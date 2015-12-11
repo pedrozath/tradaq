@@ -7,6 +7,21 @@ $azul-tradaq: #003c71
 $gelo: #e8eced
 $oliva: #cccc99
 
+*
+    box-sizing: border-box
+
+= desktop
+    @media (min-width: 1280px)
+        @content
+
+= large-desktop
+    @media (min-width: 1400px)
+        @content
+
+= mobile
+    @media (max-width: 600px)
+        @content
+
 @for $i from 0 through 4
     $weight: $i*200+100
 
@@ -15,8 +30,73 @@ $oliva: #cccc99
         font-weight: $weight
         src: asset-url("Montserrat-#{$weight}.otf")
 
-*
-    box-sizing: border-box
+
+%fluid-col
+    padding: 10px 10px
+
+    input, textarea
+        width: 100%
+        border-radius: 5px
+        border: 1px solid $cinza-escuro
+
+    label, input
+        display: block
+        padding-bottom: 10px
+
+    textarea
+        height: 150px
+
+@for $i from 1 through 4    
+
+    .col-#{$i}
+        width: 256px * $i
+
+        +mobile
+            width: 100%
+
+    .row-#{$i} > *
+        height: 120px * $i
+
+        +mobile
+            height: auto
+
+    .fluid-col-#{$i}
+        @extend %fluid-col
+        width: $i/4 * 100%
+
+.row
+    display: table
+    width: 100%
+
+    +mobile
+        display: block
+
+    > *
+        float: left
+
+        +mobile
+            float: none
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+        display: block
+
+.container
+    width: 1024px
+    margin: 0 auto
+    display: table
+
+    +mobile
+        width: 100%
+        overflow: hidden
+
+    .center
+        margin-left: -20px
+
+.seja-associado
+    display: none
 
 h1
     margin: 0
@@ -159,26 +239,6 @@ main.white-background
     padding: 30px 50px
 
 
-.container
-    width: 1024px
-    margin: 0 auto
-    display: table
-
-    .center
-        margin-left: -20px
-
-.row
-    display: table
-    width: 100%
-
-    > *
-        float: left
-
-    &:after
-        content: ""
-        display: table
-        clear: both
-
 .background-center
     background-repeat: no-repeat
     background-position: center center
@@ -206,34 +266,9 @@ ul.table-list
         margin: 0 auto
         cursor: pointer
 
-%fluid-col
-    padding: 10px 10px
-
-    input, textarea
-        width: 100%
-        border-radius: 5px
-        border: 1px solid $cinza-escuro
-
-    label, input
-        display: block
-        padding-bottom: 10px
-
-    textarea
-        height: 150px
-
-@for $i from 1 through 4    
-
-    .col-#{$i}
-        width: 256px * $i
-
-    .row-#{$i} > *
-        height: 120px * $i
-
-    .fluid-col-#{$i}
-        @extend %fluid-col
-        width: $i/4 * 100%
-
 .area-restrita
+    +mobile
+        display: none
     > *
         display: block
 
@@ -367,6 +402,13 @@ body
 .logo
     background-color: $azul-tradaq
 
+    +mobile
+        height: 60px
+        text-align: center
+
+        img
+            height: 60px
+
     &.open
         padding-top: 60px
 
@@ -375,12 +417,22 @@ body
     text-align: center
     font-size: 24px
     padding-top: 30px
-    height: 120px
+    
+    +mobile
+        padding: 10px
+        font-size: 16px
 
     &.open
         padding-top: 90px
+        
+        +mobile
+            padding: 0
 
 .menu
+
+    +mobile
+        display: none
+
     background-color: $preto
 
     nav
@@ -420,8 +472,15 @@ body
 .busca-wrapper
     padding: 0 80px 0 110px
 
+    +mobile
+        padding: 20px
+        padding-bottom: 34px
+
     h2
         text-align: left !important
+
+        +mobile
+            margin: 0
 
 input.busca
     padding: 20px
