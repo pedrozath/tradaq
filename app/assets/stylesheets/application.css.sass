@@ -88,12 +88,17 @@ $oliva: #cccc99
     margin: 0 auto
     display: table
 
+
+    .center
+        margin-left: -20px
+
     +mobile
         width: 100%
         overflow: hidden
 
-    .center
-        margin-left: -20px
+        .center
+            width: 100%
+            margin: 0
 
 .seja-associado
     display: none
@@ -126,10 +131,36 @@ h1
         > * + *
             margin-left: 20px
 
+
+.modelo-da-tradaq, .background-center
+    overflow: hidden
+    width: 100%
+
+    img
+        margin-left: -1280px/2
+        display: block
+        position: relative
+        left: 50%
+
+        +mobile
+            width: 100%
+            margin: 0
+            left: 0
+
+    // background: asset-url("modelo-da-tradaq.jpg") top center no-repeat
+    // height: 400px
+
+    // +mobile
+        // background-size: 100%
+
 .center-block p
     width: 65%
     margin: 30px auto
     text-align: center
+    
+    +mobile
+        width: 100%
+        padding: 10px 0
 
 .motivos
     padding: 40px 0
@@ -160,6 +191,9 @@ main.white-background
 
 .faq main
     padding: 60px
+
+    +mobile
+        padding: 10px
 
     .perguntas
 
@@ -192,6 +226,12 @@ main.white-background
     display: table 
     padding: 40px 0
 
+    +mobile
+        display: block
+
+        img
+            width: auto !important
+
     li
         font-size: 14px
         font-weight: 300
@@ -202,8 +242,16 @@ main.white-background
         float: left
         padding: 20px 0
 
+        +mobile
+            float: none
+            display: block
+            margin: 20px auto
+
         + li
             margin-left: 8px
+
+            +mobile
+                margin: 20px auto
 
 .anuncios
     padding: 0
@@ -221,6 +269,11 @@ main.white-background
 .pattern
     background-image: asset-url("tradaq-pattern-1.jpg")
     padding: 20px 0
+
+    +mobile
+        img
+            width: 100%
+
 .tradaq-poetry
 
     padding: 25px 0
@@ -239,6 +292,9 @@ main.white-background
     padding: 30px 50px
 
 
+.category-banner
+    width: 100%
+
 .background-center
     background-repeat: no-repeat
     background-position: center center
@@ -250,6 +306,9 @@ ul.table-list
         display: inline-block
         width: 24%
         height: 40px
+
+        +mobile
+            width: 100%
 
         a
             font-weight: 300
@@ -311,6 +370,17 @@ body, input
     font-size: 18px
     line-height: 1.45
 
+    +mobile
+        font-size: 14px
+
+.intro-sobre
+    padding: 0 60px
+    text-align: center
+
+    +mobile
+        padding: 10px
+        text-align: center
+
 h1, h2, h3, h4, h5
     font-weight: 300
 
@@ -326,6 +396,9 @@ header
     .expand
         > .open
             height: 240px
+
+            +mobile
+                height: auto
 
 nav h3, .btn, .seta, h3.com-seta
     background-image: asset-url("seta-menu.png")
@@ -412,6 +485,9 @@ body
     &.open
         padding-top: 60px
 
+        +mobile
+            padding: 0
+
 .slogan
     background-color: $branco
     text-align: center
@@ -424,14 +500,27 @@ body
 
     &.open
         padding-top: 90px
-        
+
         +mobile
-            padding: 0
+            padding: 10px
 
 .menu
-
     +mobile
-        display: none
+        position: absolute
+        left: -5px
+        top: -4px
+        background-color: transparent
+        width: 55px
+        height: 64px
+        overflow: hidden
+
+        &.open
+            // height: 100% !important
+            width: 100% !important
+            background-color: #000
+        
+        img
+            height: 70px
 
     background-color: $preto
 
@@ -613,6 +702,23 @@ header, .busca-wrapper
     margin: 4px
     font-size: 12px
 
+ul.table-list, ul.motivos, ul.anuncios, .relacionados ul
+    li
+        +mobile
+            width: 100%
+            margin-left: 0
+
+        a
+            font-weight: 300
+
+.relacionados ul
+    padding: 0
+    
+    li
+        +mobile
+            border: none !important
+            margin-bottom: 20px
+
 footer
     padding: 17px 35px
     background-color: $cinza-bem-escuro
@@ -625,8 +731,14 @@ footer
         width: 345px
         float: left
 
+        +mobile
+            width: auto
+            float: none
+
     .col-right
         float: right
+        +mobile
+            float: none
 
     h3.seta
         margin-left: 0

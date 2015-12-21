@@ -1,4 +1,5 @@
-.background-center style="background-image: url(#{image_url "permuta-banner.jpg" }); height: 543px"
+.background-center
+    = image_tag "permuta-banner.jpg"
 
 main.transparent
     .container
@@ -6,9 +7,10 @@ main.transparent
 
         .center-block: p Uma empresa que deseja participar da rede se associa. A partir do momento em que ela faz sua primeira venda de um produto ou serviço, é remunerada com uma moeda interna da rede, chamada Único (Un$). A empresa pode então utilizar seu crédito em únicos para comprar qualquer produto ou serviço que quiser e que esteja disponível.
 
-    .pattern: p style="text-align: center"= image_tag "esquema-permuta.png", size: "725x474"
+    .pattern: p style="text-align: center"= image_tag "esquema-permuta.png"
 
-    .background-center style="background-image: url(#{image_url "permuta-banner-2.jpg" }); height: 446px"
+    .background-center
+        =image_tag "permuta-banner-2.jpg"
 
     .container
         h2 Permuta multilateral no Mundo
@@ -51,9 +53,5 @@ main.transparent
                     
                     br
                     small João Marcelo Issa Costa. Diretor Comercial da Casa Mineira Decorações
-
-        nav
-            = link_to image_tag("seta-preta-esquerda.png")
-            = link_to image_tag("seta-preta-small.png")
 
     .container= render "busca"

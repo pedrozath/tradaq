@@ -1,9 +1,8 @@
 - content_for :header
     = image_tag "slide-2.jpg", class: "center"
 
-main.container
-
-    p style="padding: 0 60px; text-align: center" Oferece uma ampla rede de associados que por meio de seus produtos e serviços transformam capacidade ociosa e estoques parados em dinheiro e liquidez para seus negócios. Sua sede está baseada em São Paulo, de onde realiza operações comerciais que alcançam as praças do interior e litoral do estado, além do Rio de Janeiro e Belo Horizonte. É afiliada à IRTA – International Reciprocal Trade Association, organização internacional que promove os interesses da indústria de permuta pelo mundo.
+main.container.intro-sobre
+    p Oferece uma ampla rede de associados que por meio de seus produtos e serviços transformam capacidade ociosa e estoques parados em dinheiro e liquidez para seus negócios. Sua sede está baseada em São Paulo, de onde realiza operações comerciais que alcançam as praças do interior e litoral do estado, além do Rio de Janeiro e Belo Horizonte. É afiliada à IRTA – International Reciprocal Trade Association, organização internacional que promove os interesses da indústria de permuta pelo mundo.
 
     h2 style="background: none; text-align: center" Benefícios Tradaq
 
@@ -38,7 +37,8 @@ main.container
             **bonificação** de colaboradores  
             por meio de permuta
 
-.modelo-da-tradaq style="background: url(#{image_url "modelo-da-tradaq.jpg"}) top center no-repeat; height: 400px;"
+.modelo-da-tradaq
+    = image_tag "modelo-da-tradaq.jpg"
 
 .pattern
     .container

@@ -5,7 +5,7 @@ main.container.shadow
     .row
         = render partial: "navbar", locals: {current_category: @current_category}
         .col-3.contents.no-top-spacing.vert-shadow
-            = image_tag "topo-categoria.jpg"
+            = image_tag "topo-categoria.jpg", class: "category-banner"
             .breadcrumbs
                 | Gastronomia >
                 strong  Restaurantes
