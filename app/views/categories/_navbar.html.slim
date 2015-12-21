@@ -1,0 +1,17 @@
+.col-1
+    nav
+        ul
+            - for category in Category.all
+                li
+                        
+                    - if category == current_category
+                        h3= category.name
+                        ul
+                            - for subcategory in category.subcategories
+                                - unless current_subcategory.nil?
+                                    - subcategory_class = subcategory == current_subcategory ? "active" : ""
+
+                                li= link_to subcategory.name, subcategory, class: subcategory_class
+
+                    else
+                        = link_to category.name, category

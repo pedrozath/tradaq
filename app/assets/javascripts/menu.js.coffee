@@ -4,7 +4,12 @@ class Menu
         @is_open = false
         @over_elements = 0;
 
-        @toggler.on "mouseenter", => @open() unless @is_open
+        @toggler.on "mouseenter", => 
+            if $(window).width() > 600
+                @open() unless @is_open
+
+        @toggler.on "touchstart", =>
+            @open()
 
         @wrapper.on "mouseenter", =>
             clearTimeout @delay_to_close
